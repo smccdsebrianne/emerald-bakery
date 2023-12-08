@@ -39,7 +39,7 @@ const Header = () => {
 const Footer = () => {
   return (
     <footer className="flex bg-emerald-100 h-32">
-      <h1>Sebrianne's Test Footer</h1>
+      <h1>Sebrianne&apos;s Test Footer</h1>
     </footer>
   );
 };
