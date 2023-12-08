@@ -1,113 +1,124 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+const Header = () => {
+  return (
+    <header className="flex bg-emerald-100 h-32 justify-between items-center py-5 px-8">
+      <div className="flex items-center">
+        <Image
+          className="mx-auto"
+          src="/logo.png"
+          width={100}
+          height={100}
+          alt="Emerald Logo"
+        />
+        <h1 className="ml-3 text-5xl text-green-800 font-bold">
+          Emerald Bakery
+        </h1>
+      </div>
+      <ul className="flex gap-5 text-lg text-green-700 font-bold">
+        <li>
+          <a className="hover:underline hover:text-green-900" href="#">
+            Home
+          </a>
+        </li>
+        <li>
+          <a className="hover:underline hover:text-green-900" href="#about">
+            About
+          </a>
+        </li>
+        <li>
+          <a className="hover:underline hover:text-green-900" href="#order">
+            Order
+          </a>
+        </li>
+      </ul>
+    </header>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer className="flex bg-emerald-100 h-32">
+      <h1>Sebrianne's Test Footer</h1>
+    </footer>
+  );
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main>
+        <section
+          id="home"
+          className="bg-[url('https://images.unsplash.com/photo-1624752046901-c2a5124b1bbc?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center h-[500px] flex justify-center items-center"
+        >
+          <div className="flex flex-col items-center py-10">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/logo.png"
+              width={200}
+              height={200}
+              alt="Emerald Logo"
             />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <h1 className="text-7xl text-green-800 font-bold">
+              Emerald Bakery
+            </h1>
+            <h2 className="text-3xl max-w-3xl text-emerald-200-700 font-bold text-center">
+              New 49ers fan, but absolutely SEASONED baker. Hit my Snapchat
+              @sebriannemerald for orders!
+            </h2>
+          </div>
+        </section>
+        <section id="about">
+          <div className="flex items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
+            <div>
+              <h1 className="text-7xl text-green-800 font-bold">About</h1>
+              <p className="leading-7 max-w-2xl text-xl [&:not(:first-child)]:mt-6">
+                Emerald Bakery takes pride in serving the residents of San Mateo
+                County, California. We are dedicated to providing high-quality,
+                custom-made baked goods for all types of gatherings, ensuring
+                that every customer gets a treat that is tailored to their
+                specific needs and preferences. Our menu includes a variety of
+                desserts such as cakes, cupcakes, cookies, pastries, pies, and
+                more.
+              </p>
+            </div>
+            <div className="h-full w-full bg-emerald-100">
+              Google Maps Container
+            </div>
+          </div>
+        </section>
+        <section id="order" className="p-10">
+          <h2 className="text-4xl text-center pb-8">Emerald Specialties</h2>
+          <div className="grid grid-cols-4 gap-6">
+            <div className="bg-slate-200 flex flex-col items-center p-5">
+              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
+                IMAGE
+              </div>
+              <div className="">Item 1</div>
+            </div>
+            <div className="bg-slate-200 flex flex-col items-center p-5">
+              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
+                IMAGE
+              </div>
+              <div className="">Item 1</div>
+            </div>
+            <div className="bg-slate-200 flex flex-col items-center p-5">
+              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
+                IMAGE
+              </div>
+              <div className="">Item 1</div>
+            </div>
+            <div className="bg-slate-200 flex flex-col items-center p-5">
+              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
+                IMAGE
+              </div>
+              Item 4
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 }
