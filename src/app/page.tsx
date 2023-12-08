@@ -1,17 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
+import Iframe from "react-iframe";
 
 const Header = () => {
   return (
-    <header className="flex bg-emerald-100 h-32 justify-between items-center py-5 px-8">
+    <header className="flex bg-emerald-100 h-32 justify-between items-center py-5 px-8 sticky top-0">
       <div className="flex items-center">
         <Image
-          className="mx-auto"
+          className="mx-auto w-[3rem] md:w-[5rem] h-auto"
           src="/logo.png"
           width={100}
           height={100}
           alt="Emerald Logo"
         />
-        <h1 className="ml-3 text-5xl text-green-800 font-bold">
+        <h1 className="ml-3 text-3xl md:text-5xl text-green-800 font-bold">
           Emerald Bakery
         </h1>
       </div>
@@ -27,6 +29,14 @@ const Header = () => {
           </a>
         </li>
         <li>
+          <a
+            className="hover:underline hover:text-green-900"
+            href="#specialties"
+          >
+            Specialties
+          </a>
+        </li>
+        <li>
           <a className="hover:underline hover:text-green-900" href="#order">
             Order
           </a>
@@ -38,8 +48,15 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex bg-emerald-100 h-32">
-      <h1>Sebrianne&apos;s Test Footer</h1>
+    <footer className="flex bg-emerald-100 h-32 justify-center items-center flex-col">
+      <h1 className="text-black mb-3">© 2023 Emerald Bakery</h1>
+      <Image
+        className="mx-auto"
+        src="/logo.png"
+        width={50}
+        height={50}
+        alt="Emerald Logo"
+      />
     </footer>
   );
 };
@@ -51,69 +68,132 @@ export default function Home() {
       <main>
         <section
           id="home"
-          className="bg-[url('https://images.unsplash.com/photo-1624752046901-c2a5124b1bbc?q=80&w=1752&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center h-[500px] flex justify-center items-center"
+          className="bg-[url('/spread.jpeg')] bg-cover bg-center h-[410px] md:h-[600px] flex justify-center items-center"
         >
           <div className="flex flex-col items-center py-10">
-            <Image
-              src="/logo.png"
-              width={200}
-              height={200}
-              alt="Emerald Logo"
-            />
-            <h1 className="text-7xl text-green-800 font-bold">
-              Emerald Bakery
-            </h1>
-            <h2 className="text-3xl max-w-3xl text-emerald-200-700 font-bold text-center">
-              New 49ers fan, but absolutely SEASONED baker. Hit my Snapchat
-              @sebriannemerald for orders!
-            </h2>
+            <div className="bg-white rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] justify-center items-center flex">
+              <Image
+                src="/logo.png"
+                width={200}
+                height={200}
+                alt="Emerald Logo"
+                className="w-[5rem] md:w-[11rem] h-auto"
+              />
+            </div>
           </div>
         </section>
         <section id="about">
-          <div className="flex items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
-            <div>
+          <div className="grid md:grid-cols-2 items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
+            <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
-              <p className="leading-7 max-w-2xl text-xl [&:not(:first-child)]:mt-6">
-                Emerald Bakery takes pride in serving the residents of San Mateo
-                County, California. We are dedicated to providing high-quality,
-                custom-made baked goods for all types of gatherings, ensuring
-                that every customer gets a treat that is tailored to their
-                specific needs and preferences. Our menu includes a variety of
-                desserts such as cakes, cupcakes, cookies, pastries, pies, and
-                more.
+              <p className="leading-7 max-w-4xl text-xl [&:not(:first-child)]:mt-6">
+                Welcome to Emerald Bakery, a charming custom bakery in the heart
+                of San Mateo County. We specialize in creating a wide array of
+                desserts from scratch, each one a testament to our commitment to
+                quality and flavor. Whether you're looking for a unique cupcake
+                for a special occasion, or a delightful cookie to satisfy your
+                sweet tooth, we've got you covered. Our cookies, pastries,
+                cupcakes, tarts, scones, and other petite desserts are all made
+                with love and attention to detail, ensuring that every bite is a
+                delightful experience.
               </p>
             </div>
-            <div className="h-full w-full bg-emerald-100">
-              Google Maps Container
+            <div className="h-full w-full mt-5 md:mt-0 md:mx-[1rem]">
+              <Iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405808.9908245967!2d-122.66447835016986!3d37.380779899922366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7801e62d4689%3A0x57b3b828e617e4dc!2sSan%20Mateo%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1702015658387!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                className="place-self-stretch"
+              />
             </div>
           </div>
         </section>
-        <section id="order" className="p-10">
-          <h2 className="text-4xl text-center pb-8">Emerald Specialties</h2>
-          <div className="grid grid-cols-4 gap-6">
-            <div className="bg-slate-200 flex flex-col items-center p-5">
-              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
-                IMAGE
+        <section id="specialties" className="p-10 bg-green-900">
+          <h2 className="text-4xl text-center pb-8 font-bold md:mb-5">
+            Emerald Bakery Specialties
+          </h2>
+          <div className="grid md:grid-cols-4 gap-6 md:mb-7">
+            <div className="bg-white flex flex-col items-center rounded-md">
+              <div className="h-40 w-full rounded flex items-center justify-center">
+                <Image
+                  src="/sfcookie.png"
+                  width={525}
+                  height={788}
+                  alt="Emerald Logo"
+                  className="object-cover origin-center h-full w-full rounded-t-md"
+                />
               </div>
-              <div className="">Item 1</div>
+              <div className="text-black py-2 font-bold">Custom Cookies</div>
             </div>
-            <div className="bg-slate-200 flex flex-col items-center p-5">
-              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
-                IMAGE
+            <div className="bg-white flex flex-col items-center rounded-md">
+              <div className="h-40 w-full rounded flex items-center justify-center">
+                <Image
+                  src="/cranberry-orange-scones6-srgb..jpg"
+                  width={525}
+                  height={788}
+                  alt="Emerald Logo"
+                  className="object-cover origin-center h-full w-full rounded-t-md"
+                />
               </div>
-              <div className="">Item 1</div>
+              <div className="text-black py-2 font-bold">Scones</div>
             </div>
-            <div className="bg-slate-200 flex flex-col items-center p-5">
-              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
-                IMAGE
+            <div className="bg-white flex flex-col items-center rounded-md">
+              <div className="h-40 w-full rounded flex items-center justify-center">
+                <Image
+                  src="/cupcake.jpeg"
+                  width={525}
+                  height={788}
+                  alt="Emerald Logo"
+                  className="object-cover origin-center h-full w-full rounded-t-md"
+                />
               </div>
-              <div className="">Item 1</div>
+              <div className="text-black py-2 font-bold">Cupcakes</div>
             </div>
-            <div className="bg-slate-200 flex flex-col items-center p-5">
-              <div className="bg-blue-500 h-32 w-32 rounded flex items-center justify-center">
-                IMAGE
+            <div className="bg-white flex flex-col items-center rounded-md">
+              <div className="h-40 w-full rounded flex items-center justify-center">
+                <Image
+                  src="/pineapple.jpeg"
+                  width={525}
+                  height={788}
+                  alt="Emerald Logo"
+                  className="object-cover origin-center h-full w-full rounded-t-md"
+                />
               </div>
-              Item 4
+              <div className="text-black py-2 font-bold">Petite Desserts</div>
+            </div>
+          </div>
+        </section>
+        <section id="order">
+          <div className="grid md:grid-cols-2 items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
+            <div>
+              <h1 className="text-7xl text-green-800 font-bold">
+                Ready to Order?
+              </h1>
+              <p className="leading-7 max-w-4xl text-xl [&:not(:first-child)]:mt-6 md:mr-3">
+                We are excited to help make your next gathering special! Enter
+                your order in the form provided or email us at&nbsp;
+                <Link
+                  href="mailto:emeraldbakeryorders@gmail.com."
+                  className="text-green-900"
+                >
+                  emeraldbakeryorders@gmail.com.
+                </Link>
+              </p>
+            </div>
+            <div className="h-full bg-emerald-100 rounded-md mt-5 md:mt-0">
+              <Iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdnq4_C-IzUa7qJTTUw7lspU4pKx11TXiuvBah_kea4FCJWlw/viewform?embedded=true"
+                width="640"
+                height="1170"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                className="mt-3 w-full"
+              />
             </div>
           </div>
         </section>

@@ -5,9 +5,9 @@ import "./globals.css";
 const quicksand = Quicksand({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emerald Bakery - Woodside, CA",
+  title: "Emerald Bakery",
   description:
-    "New 49ers fan, but absolutely SEASONED baker. Hit my Snapchat @sebriannemerald for orders!",
+    "A San Mateo County local custom bakery specializing in custom cookies, cupcakes, pastries, and petite desserts for any occasion.",
 };
 
 export default function RootLayout({
