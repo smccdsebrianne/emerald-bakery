@@ -90,12 +90,12 @@ export default function Home() {
                 Welcome to Emerald Bakery, a charming custom bakery in the heart
                 of San Mateo County. We specialize in creating a wide array of
                 desserts from scratch, each one a testament to our commitment to
-                quality and flavor. Whether you're looking for a unique cupcake
-                for a special occasion, or a delightful cookie to satisfy your
-                sweet tooth, we've got you covered. Our cookies, pastries,
-                cupcakes, tarts, scones, and other petite desserts are all made
-                with love and attention to detail, ensuring that every bite is a
-                delightful experience.
+                quality and flavor. Whether you&apos;re looking for a unique
+                cupcake for a special occasion, or a delightful cookie to
+                satisfy your sweet tooth, we&apos;ve got you covered. Our
+                cookies, pastries, cupcakes, tarts, scones, and other petite
+                desserts are all made with love and attention to detail,
+                ensuring that every bite is a delightful experience.
               </p>
             </div>
             <div className="h-full w-full mt-5 md:mt-0 md:mx-[1rem]">
