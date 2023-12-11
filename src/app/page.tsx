@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Iframe from "react-iframe";
 
 const Header = () => {
   return (
@@ -82,8 +81,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about">
-          <div className="grid md:grid-cols-2 items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
+        <section
+          id="about"
+          className="bg-gradient-to-r from-emerald-400 to-emerald-200 w-full"
+        >
+          <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
               <p className="leading-7 max-w-4xl text-xl [&:not(:first-child)]:mt-6">
@@ -99,20 +101,20 @@ export default function Home() {
               </p>
             </div>
             <div className="h-full w-full mt-5 md:mt-0 md:mx-[1rem]">
-              <Iframe
+              <iframe
+                title="Map location of San Mateo county"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405808.9908245967!2d-122.66447835016986!3d37.380779899922366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7801e62d4689%3A0x57b3b828e617e4dc!2sSan%20Mateo%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1702015658387!5m2!1sen!2sus"
                 width="100%"
                 height="450"
-                style="border:0;"
-                allowfullscreen=""
+                allowFullScreen={false}
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                className="place-self-stretch"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="place-self-stretch border-0"
               />
             </div>
           </div>
         </section>
-        <section id="specialties" className="p-10 bg-green-900">
+        <section id="specialties" className="px-10 py-24 bg-green-900">
           <h2 className="text-4xl text-center pb-8 font-bold md:mb-5">
             Emerald Bakery Specialties
           </h2>
@@ -185,13 +187,11 @@ export default function Home() {
               </p>
             </div>
             <div className="h-full bg-emerald-100 rounded-md mt-5 md:mt-0">
-              <Iframe
+              <iframe
+                title="Order form"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdnq4_C-IzUa7qJTTUw7lspU4pKx11TXiuvBah_kea4FCJWlw/viewform?embedded=true"
                 width="640"
-                height="1170"
-                frameborder="0"
-                marginheight="0"
-                marginwidth="0"
+                height="1170px"
                 className="mt-3 w-full"
               />
             </div>
