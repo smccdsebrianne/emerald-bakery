@@ -191,7 +191,7 @@ export default function Home() {
                 title="Order form"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSc40EI8qSkN8ElsFhzS0rh6Q4LxIjfqS3rT6CXt867Pm5Rrgw/viewform?embedded=true"
                 width="640"
-                height="1170px"
+                height="1300px"
                 className="mt-3 w-full"
               />
             </div>
