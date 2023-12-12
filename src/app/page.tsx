@@ -16,7 +16,7 @@ const Header = () => {
           Emerald Bakery
         </h1>
       </div>
-      <ul className="flex gap-5 text-lg text-green-700 font-bold">
+      <ul className="sr-only md:not-sr-only flex gap-5 text-lg text-green-700 font-bold">
         <li>
           <a className="hover:underline hover:text-green-900" href="#">
             Home
@@ -88,7 +88,7 @@ export default function Home() {
           <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
-              <p className="leading-7 max-w-4xl text-xl [&:not(:first-child)]:mt-6">
+              <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
                 Welcome to Emerald Bakery, a charming custom bakery in the heart
                 of San Mateo County. We specialize in creating a wide array of
                 desserts from scratch, each one a testament to our commitment to
@@ -169,9 +169,12 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="order">
-          <div className="grid md:grid-cols-2 items-stretch px-12 bg-gradient-to-r from-emerald-400 to-emerald-200 py-10 px-15">
-            <div>
+        <section
+          id="order"
+          className=" bg-gradient-to-r from-emerald-400 to-emerald-200"
+        >
+          <div className="py-10">
+            <div className="flex flex-col max-w-2xl text-center mx-auto">
               <h1 className="text-7xl text-green-800 font-bold">
                 Ready to Order?
               </h1>
@@ -186,7 +189,7 @@ export default function Home() {
                 </Link>
               </p>
             </div>
-            <div className="h-full bg-emerald-100 rounded-md mt-5 md:mt-0">
+            <div className="h-full rounded-md mt-5 md:mt-0">
               <iframe
                 title="Order form"
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdnq4_C-IzUa7qJTTUw7lspU4pKx11TXiuvBah_kea4FCJWlw/viewform?embedded=true"
