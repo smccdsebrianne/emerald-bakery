@@ -8,8 +8,8 @@ const Header = () => {
         <Image
           className="mx-auto w-[3rem] md:w-[5rem] h-auto"
           src="/logo.png"
-          width={100}
-          height={100}
+          width={2276}
+          height={2652}
           alt="Emerald Logo"
         />
         <h1 className="ml-3 text-3xl md:text-5xl text-green-800 font-bold">
