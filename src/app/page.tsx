@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="bg-emerald-200 w-full">
+        <section id="about" className="bg-emerald-400 w-full">
           <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
