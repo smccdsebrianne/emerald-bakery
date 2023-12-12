@@ -81,10 +81,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section
-          id="about"
-          className="bg-gradient-to-r from-emerald-400 to-emerald-200 w-full"
-        >
+        <section id="about" className="bg-emerald-200 w-full">
           <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
@@ -171,7 +168,7 @@ export default function Home() {
         </section>
         <section
           id="order"
-          className=" bg-gradient-to-r from-emerald-400 to-emerald-200"
+          className="bg-gradient-to-r from-emerald-400 to-emerald-200"
         >
           <div className="py-10">
             <div className="flex flex-col max-w-2xl text-center mx-auto">
