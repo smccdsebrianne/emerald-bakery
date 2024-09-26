@@ -173,8 +173,8 @@ export default function Home() {
               <div className="text-black pt-3 pb-2 font-bold">Scones</div>
               <div className="text-black py-3 px-3 text-center">
                 Our Cranberry-Orange Scones are a hit for corporate events,
-                teacher appreciation, or just to enjoy with a cup of tea. You've
-                never had a scone this good!
+                teacher appreciation, or just to enjoy with a cup of tea.
+                You&apos;ve never had a scone this good!
               </div>
             </div>
             <div className="bg-white flex flex-col items-center rounded-md">
@@ -211,8 +211,8 @@ export default function Home() {
                 Custom Requests
               </div>
               <div className="text-black py-3 px-3 text-center">
-                Have a specific sweet request that's not listed in our order
-                form?{" "}
+                Have a specific sweet request that&apos;s not listed in our
+                order form?{" "}
                 <Link
                   href="mailto:emeraldbakeryorders@gmail.com"
                   className="text-emerald-900 font-bold"
