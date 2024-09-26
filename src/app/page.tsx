@@ -1,5 +1,7 @@
+import { Autour_One } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import Insta from "./Instagram";
 
 const Header = () => {
   return (
@@ -12,8 +14,8 @@ const Header = () => {
           height={2652}
           alt="Emerald Logo"
         />
-        <h1 className="ml-3 text-3xl md:text-5xl text-green-800 font-bold">
-          Emerald Bakery
+        <h1 className="ml-3 text-2xl md:text-4xl text-green-800 font-bold">
+          EMERALD BAKERY
         </h1>
       </div>
       <ul className="sr-only md:not-sr-only flex gap-5 text-lg text-green-700 font-bold">
@@ -60,7 +62,10 @@ const Footer = () => {
           </svg>
         </Link>
       </div>
-      <h1 className="text-black mb-3">© 2023 Emerald Bakery</h1>
+      <Link className="text-black mb-3" href="https://linktr.ee/emeraldbakery">
+        linktr.ee/emeraldbakery
+      </Link>
+      <h1 className="text-black">© 2024 Emerald Bakery</h1>
     </footer>
   );
 };
@@ -72,7 +77,7 @@ export default function Home() {
       <main>
         <section
           id="home"
-          className="bg-[url('/spread.jpeg')] bg-cover bg-center h-[410px] md:h-[600px] flex justify-center items-center"
+          className="bg-[url('/tasty.gif')] bg-cover bg-center h-[410px] md:h-[600px] flex justify-center items-center"
         >
           <div className="flex flex-col items-center py-10">
             <div className="bg-white rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] justify-center items-center flex">
@@ -91,28 +96,44 @@ export default function Home() {
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
               <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
-                Welcome to Emerald Bakery, a charming custom bakery in the heart
-                of San Mateo County. We specialize in creating a wide array of
-                desserts from scratch, each one a testament to our commitment to
-                quality and flavor. Whether you&apos;re looking for a unique
-                cupcake for a special occasion, or a delightful cookie to
-                satisfy your sweet tooth, we&apos;ve got you covered. Our
-                cookies, pastries, cupcakes, tarts, scones, and other petite
-                desserts are all made with love and attention to detail,
-                ensuring that every bite is a delightful experience.
+                Welcome to Emerald Bakery, a custom-order bakery serving the San
+                Francisco Bay Area and South Bay. We specialize in pastries,
+                custom-decorated cookies, and cakes, and are happy to cater your
+                next gathering.
+              </p>
+              <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
+                Our bakery accepts both small batch orders just to enjoy and
+                large-batch orders for parties, office treats, teacher
+                appreciation, and all your event needs. All our desserts are
+                made with the best ingredients and great attention to detail.
+              </p>
+              <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
+                We look forward to serving you!
               </p>
             </div>
             <div className="h-full w-full mt-5 md:mt-0 md:mx-[1rem]">
-              <iframe
-                title="Map location of San Mateo county"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d405808.9908245967!2d-122.66447835016986!3d37.380779899922366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7801e62d4689%3A0x57b3b828e617e4dc!2sSan%20Mateo%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1702015658387!5m2!1sen!2sus"
-                width="100%"
-                height="450"
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="place-self-stretch border-0"
-              />
+              <div className=" bg-green-900 p-8 ml-3">
+                <h2 className="text-3xl text-white font-bold pb-3">
+                  You May Have Seen Us At...
+                </h2>
+                <p className="text-xl">REHREH Threads &amp; Goods</p>
+                <p className="text-xl">Portola Valley Town Picnic</p>
+                <p className="text-xl">Portola Valley Arts Fest</p>
+                <p className="text-xl pb-8">Woodside Day of the Horse</p>
+
+                <h2 className="text-3xl text-white font-bold pb-3">
+                  We Can Provide...
+                </h2>
+                <p className="text-xl">Custom Edible Wedding Favors</p>
+                <p className="text-xl">Coroprate Catering</p>
+                <p className="text-xl">Holiday Desserts</p>
+                <p className="text-xl">Birthday Cakes and Cupcakes</p>
+                <p className="text-xl">Catoring for School Events</p>
+                <p className="text-xl">Afternoon Tea Spreads</p>
+                <p className="text-xl">Custom Cookies for Sports Fans</p>
+                <p className="text-xl">Beautiful Gift Packages</p>
+                <p className="text-xl">+More!</p>
+              </div>
             </div>
           </div>
         </section>
@@ -127,47 +148,80 @@ export default function Home() {
                   src="/49ers.jpg"
                   width={525}
                   height={788}
-                  alt="Emerald Logo"
+                  alt="Custom decorated cookies"
                   className="object-cover origin-center h-full w-full rounded-t-md"
                 />
               </div>
-              <div className="text-black py-2 font-bold">Custom Cookies</div>
+              <div className="text-black pt-3 pb-2 font-bold">
+                Custom Decorated Cookies
+              </div>
+              <div className="text-black py-3 px-3 text-center">
+                We can provide custom designs for any theme, including holidays,
+                sports events, wedding favors, baby showers, themed parties,
+                promoting your brand, and more.
+              </div>
             </div>
             <div className="bg-white flex flex-col items-center rounded-md">
               <div className="h-40 w-full rounded flex items-center justify-center">
                 <Image
-                  src="/cranberry-orange-scones6-srgb..jpg"
+                  src="/scones.png"
                   width={525}
                   height={788}
                   alt="Emerald Logo"
                   className="object-cover origin-center h-full w-full rounded-t-md"
                 />
               </div>
-              <div className="text-black py-2 font-bold">Scones</div>
+              <div className="text-black pt-3 pb-2 font-bold">Scones</div>
+              <div className="text-black py-3 px-3 text-center">
+                Our Cranberry-Orange Scones are a hit for corporate events,
+                teacher appreciation, or just to enjoy with a cup of tea. You've
+                never had a scone this good!
+              </div>
             </div>
             <div className="bg-white flex flex-col items-center rounded-md">
               <div className="h-40 w-full rounded flex items-center justify-center">
                 <Image
-                  src="/cupcake.jpeg"
+                  src="/cupcakes.png"
                   width={525}
                   height={788}
                   alt="Emerald Logo"
                   className="object-cover origin-center h-full w-full rounded-t-md"
                 />
               </div>
-              <div className="text-black py-2 font-bold">Cupcakes</div>
+              <div className="text-black pt-3 pb-2 font-bold">
+                Cupcakes and Cakes
+              </div>
+              <div className="text-black py-3 px-3 text-center">
+                We can provide cupcakes and full-sized cakes for birthdays and
+                other parties in a wide array of flavors, including chocolate,
+                vanilla, dulce de leche, chocolate-raspberry, tiramisu,
+                confetti, red velvet, and more!
+              </div>
             </div>
             <div className="bg-white flex flex-col items-center rounded-md">
               <div className="h-40 w-full rounded flex items-center justify-center">
                 <Image
-                  src="/pineapple.jpeg"
+                  src="/custom.jpg"
                   width={525}
                   height={788}
                   alt="Emerald Logo"
                   className="object-cover origin-center h-full w-full rounded-t-md"
                 />
               </div>
-              <div className="text-black py-2 font-bold">Petite Desserts</div>
+              <div className="text-black pt-3 pb-2 font-bold">
+                Custom Requests
+              </div>
+              <div className="text-black py-3 px-3 text-center">
+                Have a specific sweet request that's not listed in our order
+                form?{" "}
+                <Link
+                  href="mailto:emeraldbakeryorders@gmail.com"
+                  className="text-emerald-900 font-bold"
+                >
+                  Send us an email
+                </Link>{" "}
+                and we will be happy to work with you!
+              </div>
             </div>
           </div>
         </section>
@@ -193,12 +247,15 @@ export default function Home() {
             </div>
             <div className="h-full rounded-md mt-5 md:mt-0">
               <iframe
-                title="Order form"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc40EI8qSkN8ElsFhzS0rh6Q4LxIjfqS3rT6CXt867Pm5Rrgw/viewform?embedded=true"
-                width="640"
-                height="1300px"
-                className="mt-3 w-full"
-              />
+                id="JotFormIFrame-242531013871145"
+                title="Emerald Bakery Order Form"
+                allow="geolocation; microphone; camera; fullscreen"
+                src="https://form.jotform.com/242531013871145"
+                width="70%"
+                height="600px"
+                className="m-auto pt-3"
+                scrolling="yes"
+              ></iframe>
             </div>
           </div>
         </section>
