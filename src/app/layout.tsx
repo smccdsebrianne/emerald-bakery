@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Emerald Bakery",
@@ -17,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${quicksand.className} overflow-x-hidden`}>
+      <body className={`${montserrat.className} overflow-x-hidden`}>
         {children}
       </body>
     </html>
