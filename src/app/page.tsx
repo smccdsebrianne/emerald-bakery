@@ -64,7 +64,7 @@ const Footer = () => {
       <Link className="text-black mb-3" href="https://linktr.ee/emeraldbakery">
         linktr.ee/emeraldbakery
       </Link>
-      <h1 className="text-black">© 2024 Emerald Bakery</h1>
+      <h1 className="text-black">© 2025 Emerald Bakery</h1>
     </footer>
   );
 };
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="bg-emerald-400 w-full">
+        <section id="about" className="bg-emerald-500 w-full">
           <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
@@ -115,6 +115,8 @@ export default function Home() {
                 <h2 className="text-3xl text-white font-bold pb-3">
                   You May Have Seen Us At...
                 </h2>
+                <p className="text-xl">SMCCCD Hackathon</p>
+                <p className="text-xl">REHREH Threads &amp; Goods</p>
                 <p className="text-xl">REHREH Threads &amp; Goods</p>
                 <p className="text-xl">Portola Valley Town Picnic</p>
                 <p className="text-xl">Portola Valley Arts Fest</p>
@@ -226,7 +228,7 @@ export default function Home() {
         </section>
         <section
           id="order"
-          className="bg-gradient-to-r from-emerald-400 to-emerald-200"
+          className="bg-gradient-to-r from-emerald-600 to-emerald-300"
         >
           <div className="py-10">
             <div className="flex flex-col max-w-2xl text-center mx-auto">
@@ -244,17 +246,27 @@ export default function Home() {
                 </Link>
               </p>
             </div>
-            <div className="h-full rounded-md mt-5 md:mt-0">
-              <iframe
-                id="JotFormIFrame-242531013871145"
-                title="Emerald Bakery Order Form"
-                allow="geolocation; microphone; camera; fullscreen"
-                src="https://form.jotform.com/242531013871145"
-                width="70%"
-                height="600px"
-                className="m-auto pt-3"
-                scrolling="yes"
-              ></iframe>
+            <div className="h-full rounded-md mt-5 md:mt-3">
+              <div className="m-4">
+                <a
+                  href="https://emerald-bakery.square.site/"
+                  className="m-auto block bg-green-900 w-[35%] p-5 rounded-lg"
+                >
+                  <div className="text-center">
+                    Order and Pay with Credit Card
+                  </div>
+                </a>
+              </div>
+              <div className="m-4">
+                <a
+                  href="https://www.jotform.com/form/242531013871145"
+                  className="m-auto block bg-green-900 w-[35%] p-5 rounded-lg"
+                >
+                  <div className="text-center">
+                    Order and Pay with Venmo or Cash
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </section>
