@@ -76,7 +76,7 @@ export default function Home() {
       <main>
         <section
           id="home"
-          className="bg-[url('/tasty.gif')] bg-cover bg-center h-[410px] md:h-[600px] flex justify-center items-center"
+          className="bg-[url('/tasty.gif')] h-[310px] md:h-[400px] flex justify-center items-center"
         >
           <div className="flex flex-col items-center py-10">
             <div className="bg-white rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] justify-center items-center flex">
@@ -90,22 +90,20 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="about" className="bg-emerald-500 w-full">
+        <section
+          id="about"
+          className="bg-gradient-to-r from-emerald-500 to-emerald-700 w-full"
+        >
           <div className="container mx-auto grid md:grid-cols-2 items-stretch px-12 py-24 px-15">
             <div className="w-full">
               <h1 className="text-7xl text-green-800 font-bold">About</h1>
               <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
-                Welcome to Emerald Bakery, a custom-order bakery serving the San
-                Francisco Bay Area and South Bay. We specialize in pastries,
-                custom-decorated cookies, and cakes, and are happy to cater your
-                next gathering.
+                Welcome to Emerald Bakery, a custom-order bakery serving the Bay
+                Area Peninsula and South Bay. We specialize in custom-decorated
+                cookies, pastries, and cakes. All our desserts are made with the
+                best ingredients and great attention to detail.
               </p>
-              <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
-                Our bakery accepts both small batch orders just to enjoy and
-                large-batch orders for parties, office treats, teacher
-                appreciation, and all your event needs. All our desserts are
-                made with the best ingredients and great attention to detail.
-              </p>
+
               <p className="leading-7 max-w-xl text-xl [&:not(:first-child)]:mt-6">
                 We look forward to serving you!
               </p>
@@ -115,8 +113,9 @@ export default function Home() {
                 <h2 className="text-3xl text-white font-bold pb-3">
                   You May Have Seen Us At...
                 </h2>
-                <p className="text-xl">SMCCCD Hackathon</p>
-                <p className="text-xl">REHREH Threads &amp; Goods</p>
+                <p className="text-xl">
+                  San Mateo County Community College District Events
+                </p>
                 <p className="text-xl">REHREH Threads &amp; Goods</p>
                 <p className="text-xl">Portola Valley Town Picnic</p>
                 <p className="text-xl">Portola Valley Arts Fest</p>
@@ -129,10 +128,9 @@ export default function Home() {
                 <p className="text-xl">Coroprate Catering</p>
                 <p className="text-xl">Holiday Desserts</p>
                 <p className="text-xl">Birthday Cakes and Cupcakes</p>
-                <p className="text-xl">Catoring for School Events</p>
+                <p className="text-xl">Sweets for School Events</p>
                 <p className="text-xl">Afternoon Tea Spreads</p>
                 <p className="text-xl">Custom Cookies for Sports Fans</p>
-                <p className="text-xl">Beautiful Gift Packages</p>
                 <p className="text-xl">+More!</p>
               </div>
             </div>
@@ -228,11 +226,11 @@ export default function Home() {
         </section>
         <section
           id="order"
-          className="bg-gradient-to-r from-emerald-600 to-emerald-300"
+          className="bg-gradient-to-r from-emerald-700 to-emerald-600"
         >
           <div className="py-10">
             <div className="flex flex-col max-w-2xl text-center mx-auto">
-              <h1 className="text-7xl text-green-800 font-bold">
+              <h1 className="text-7xl text-emerald-200 font-bold">
                 Ready to Order?
               </h1>
               <p className="leading-7 max-w-4xl text-xl [&:not(:first-child)]:mt-6 md:mr-3">
@@ -240,31 +238,36 @@ export default function Home() {
                 your order in the form provided or email us at&nbsp;
                 <Link
                   href="mailto:emeraldbakeryorders@gmail.com."
-                  className="text-green-900"
+                  className="text-emerald-300 font-bold"
                 >
                   emeraldbakeryorders@gmail.com.
                 </Link>
+              </p>
+              <p className="py-3">
+                After you fill out the order request, we will contact you to go
+                over details (including delivery date, fee(s), and payment
+                method) before the order is completed.{" "}
+                <span className="font-bold">
+                  Please confirm your order and delivery details within 3 days
+                  of receiving your invoice from us
+                </span>
+                , otherwise the date you requested will open up to other
+                customers.
+              </p>
+              <p className="pb-4">
+                <span className="font-bold">
+                  Orders must be placed at least 1 week in advance to be
+                  processed.
+                </span>
               </p>
             </div>
             <div className="h-full rounded-md mt-5 md:mt-3">
               <div className="m-4">
                 <a
-                  href="https://emerald-bakery.square.site/"
-                  className="m-auto block bg-green-900 w-[35%] p-5 rounded-lg"
-                >
-                  <div className="text-center">
-                    Order and Pay with Credit Card
-                  </div>
-                </a>
-              </div>
-              <div className="m-4">
-                <a
                   href="https://www.jotform.com/form/242531013871145"
                   className="m-auto block bg-green-900 w-[35%] p-5 rounded-lg"
                 >
-                  <div className="text-center">
-                    Order and Pay with Venmo or Cash
-                  </div>
+                  <div className="text-center">Order Request Form →</div>
                 </a>
               </div>
             </div>
