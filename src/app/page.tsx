@@ -76,7 +76,7 @@ export default function Home() {
       <main>
         <section
           id="home"
-          className="bg-[url('/tasty.gif')] h-[310px] md:h-[400px] flex justify-center items-center"
+          className="bg-[url('/custom.jpg')] bg-cover bg-center h-[310px] md:h-[400px] flex justify-center items-center"
         >
           <div className="flex flex-col items-center py-10">
             <div className="bg-white rounded-full w-[8rem] h-[8rem] md:w-[16rem] md:h-[16rem] justify-center items-center flex">
